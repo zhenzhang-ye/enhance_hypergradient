@@ -85,7 +85,7 @@ def paserConfig():
     parser.add_argument('--min_plot', type=float, default=-3.5)
     parser.add_argument('--max_plot', type=float, default=1.5)
     parser.add_argument('--num_plot', type=int, default=20)
-    parser.add_argument('--demo', type=bool, default=True, help='Run the demo')
+    parser.add_argument('--demo', default=True, help='Run the demo', action='store_false')
     args = parser.parse_args()
     if args.demo == False:
         args.num_plot = 150
